@@ -1,0 +1,139 @@
+.global-header {
+  background: white;
+  position: fixed;
+  top: 0;
+  z-index: 8;
+  width: 100%;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.15);
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .microsite-title {
+    font-family: var(--fontFamily-light);
+    .back-btn {
+      display: flex;
+      margin-right: 2rem;
+      img {
+        height: 30px;
+      }
+    }
+  }
+  .flex {
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      li {
+        margin: 0 3rem;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .header-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.global-sidebar {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+  .sidebar-container {
+    margin-top: 6rem;
+    background-color: white;
+    width: 400px;
+    height: calc(100vh - 6rem);
+    padding: var(--spacing-6);
+    position: relative;
+    overflow: auto;
+    .collapsable {
+      width: 100%;
+      padding: var(--spacing-6) 0;
+      border-bottom: 1px solid;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .collapse-header {
+        width: 100%;
+        cursor: pointer;
+        &.flex {
+          justify-content: space-between;
+        }
+        .plus-minus {
+          width: 15px;
+          height: 15px;
+          text-align: center;
+        }
+        h4 {
+          margin: 0;
+          font-weight: 400;
+          font-size: 1.3rem;
+          transition: color 1s ease
+          ;
+        }
+      }
+      .sub-nav-cnt {
+        margin-top: var(--spacing-6);
+        padding-left: var(--spacing-6);
+      }
+      .sub-nav-items {
+        margin-top: 1rem;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  &.align-center {
+    align-items: center;
+  }
+}
+
+.window {
+  margin-top: 6rem;
+  .margin {
+    .content-container {
+      width: 100%;
+      position: relative;
+    }
+    .content {
+      width: calc(100% - 400px);
+      position: absolute;
+      right: 0;
+      .children {
+        padding: var(--spacing-16);
+      }
+    }
+  }
+}
+
+.active h4 {
+  color: var(--color-primary);
+  padding-left: 1.5em;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--color-primary);
+    transition: 1s ease;
+  }
+}

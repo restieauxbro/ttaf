@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Targeted Training and Apprenticeship Fund`,
     author: {
-      name: `Kyle Mathews`,
+      name: `Competenz`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
@@ -10,8 +10,67 @@ module.exports = {
     social: {
       twitter: `kylemathews`,
     },
+    menuLinks: [
+      {
+        name: `What am I eligible for?`,
+        link: `/what-am-I-eligible-for`,
+        subMenu: [
+          {
+            anchorName: `example`,
+            anchorLink: `/what-am-I-eligible-for/example`,
+          },
+          {
+            anchorName: `example`,
+            anchorLink: `/what-am-I-eligible-for/example`,
+          },
+        ],
+      },
+      {
+        name: `How do I claim?`,
+        link: `/how-do-I-claim`,
+        subMenu: [
+          {
+            anchorName: `example3`,
+            anchorLink: `/how-do-I-claim/example`,
+          },
+          {
+            anchorName: `example4`,
+            anchorLink: `/how-do-I-claim/example`,
+          },
+        ],
+      },
+      {
+        name: `How is the money sorted?`,
+        link: `/how-is-the-money-sorted`,
+        subMenu: [
+          {
+            anchorName: `example3`,
+            anchorLink: `/how-is-the-money-sorted/example`,
+          },
+          {
+            anchorName: `example4`,
+            anchorLink: `/how-is-the-money-sorted/example`,
+          },
+        ],
+      },
+      {
+        name: `How do I claim?`,
+        link: `/example`,
+        subMenu: [
+          {
+            anchorName: `example3`,
+            anchorLink: `example`,
+          },
+          {
+            anchorName: `example4`,
+            anchorLink: `example`,
+          },
+        ],
+      },
+    ],
   },
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

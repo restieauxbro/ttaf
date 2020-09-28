@@ -1,34 +1,45 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  let header
+import SidebarNav from "./sidebarnav"
+import Window from "../components/window"
 
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
-
+const Layout = ({ children, pageTitle }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
+    <div>
+      <header className="global-header">
+        <div className="margin flex">
+          
+          <div className="microsite-title flex align-center">
+            <a href="https://www.competenz.org.nz/">
+          <div className="back-btn">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/126/126492.svg" alt=""/>
+          </div>
+          </a>
+          <Link to={`/`}>
+            <div className="title">{data.site.siteMetadata.title}</div>
+          </Link>
+          </div>
+          <ul>
+            <li>Contact</li>
+            <img className="header-logo"
+              src="https://www.competenz.org.nz/themes/competenz/images/logo-brandmark.svg"
+              alt="Competenz logo"
+            />
+          </ul>
+        </div>
+      </header>
+      <SidebarNav />
+      <Window pageTitle={pageTitle}>{children}</Window>
     </div>
   )
 }

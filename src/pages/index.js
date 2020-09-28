@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import "../styles/styles.scss"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -26,35 +27,31 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <Bio />
-      {posts.map(post => {
-        const title = post.frontmatter.title || post.fields.slug
-        return (
-          <article
-            key={post.fields.slug}
-            className="post-list-item"
-            itemScope
-            itemType="http://schema.org/Article"
-          >
-            <header>
-              <h2>
-                <Link to={post.fields.slug} itemProp="url">
-                  <span itemProp="headline">{title}</span>
-                </Link>
-              </h2>
-              <small>{post.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: post.frontmatter.description || post.excerpt,
-                }}
-                itemProp="description"
-              />
-            </section>
-          </article>
-        )
-      })}
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugit,
+        dolor aspernatur tenetur sint dignissimos ipsum rem quis esse sunt ipsa
+        corrupti, obcaecati itaque animi similique? Repellat minima recusandae
+        magnam dolor, sed quod consequatur dolore tempore ipsa in. Optio
+        corporis architecto non necessitatibus quod amet quas maiores molestias
+        debitis delectus totam, perferendis aut excepturi magni, quos similique
+        laborum ipsam. Magni vel rerum officia ab adipisci! Necessitatibus,
+        quibusdam officiis consectetur corporis non, velit nobis exercitationem
+        labore reprehenderit deserunt aut inventore temporibus, neque ipsam id
+        ab iure porro. Alias, exercitationem doloremque unde ducimus libero
+        nisi! Molestias sapiente nobis, mollitia provident soluta repellat?
+        <br /> <br />
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla commodi
+        quaerat provident! Eligendi aperiam, ab totam reprehenderit velit ad
+        consequatur soluta voluptates nulla laborum vero! Sint doloribus
+        expedita eos. Culpa magnam recusandae, tempora vel expedita veritatis
+        excepturi maxime vitae maiores amet quisquam, quas fugiat? Cum
+        doloremque rerum repellat, fugiat quam libero, perferendis quasi tempora
+        id, molestias soluta voluptates. Quidem molestiae dolorum hic iusto,
+        sapiente nostrum qui accusantium voluptates, commodi perspiciatis
+        mollitia corporis excepturi praesentium vitae, tempora cupiditate
+        deserunt veritatis voluptate!
+      </p>
     </Layout>
   )
 }
