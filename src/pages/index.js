@@ -11,7 +11,7 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
 
   return (
-    <Window location={location} title={`siteTitle`}>
+    <Window location={location} title={`siteTitle`} pageTitle="Targeted Training and Apprenticeship Fund">
       <SEO title="Home" />
 
       <p>

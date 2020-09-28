@@ -73,13 +73,20 @@
         .plus-minus {
           text-align: center;
           padding: 2px 2px 5px 30px;
+          cursor: pointer;
+          h4{
+            color: grey;
+          }
         }
         h4 {
           margin: 0;
           font-weight: 400;
           font-size: 1.3rem;
-          transition: color 1s ease;
+          position: relative;
+          transition: color 0.3s ease,
+            padding 0.6s cubic-bezier(0.17, 0.67, 0.65, 1);
           cursor: pointer;
+
         }
       }
       .sub-nav-cnt {
@@ -95,6 +102,28 @@
     }
   }
 }
+
+h4 {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    top: 0;
+    left: -4px;
+    background-color: var(--color-primary);
+    transition: width .3s ease;
+  }
+}
+
+.active h4 {
+  color: var(--color-primary);
+  padding-left: 1em;
+  &::before {
+    width: 4px;
+  }
+}
+
 
 .flex {
   display: flex;
@@ -118,21 +147,5 @@
         padding: var(--spacing-16);
       }
     }
-  }
-}
-
-.active h4 {
-  color: var(--color-primary);
-  padding-left: 1.5em;
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    left: -5px;
-    top: 0;
-    width: 5px;
-    height: 100%;
-    background-color: var(--color-primary);
-    transition: 1s ease;
   }
 }
