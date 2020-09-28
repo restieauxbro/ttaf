@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Layout from '../../components/layout'
+import Window from '../../components/window'
 
 const example = () => {
     return ( 
-        <Layout pageTitle="Here's an example"></Layout>
+        <Window pageTitle="Here's an example"></Window>
      );
 }
  

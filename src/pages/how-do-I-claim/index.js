@@ -1,9 +1,9 @@
 import React from "react"
-import Layout from "../../components/layout"
+import Window from '../../components/window'
 
 const Ttaf = () => {
   return (
-    <Layout pageTitle="How do I claim?">
+    <Window pageTitle="How do I claim?">
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius dolore
         dolor possimus blanditiis aliquid alias? Ad commodi, quos ab, minus
@@ -17,7 +17,7 @@ const Ttaf = () => {
         exercitationem, ratione, unde facilis officiis nesciunt commodi
         quibusdam est odit obcaecati ad atque! Nihil, voluptas maiores.
       </p>
-    </Layout>
+    </Window>
   )
 }
 

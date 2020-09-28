@@ -9,21 +9,28 @@ const Collapsable = ({ title, children, link }) => {
   }
   return (
     <div className="collapsable ">
-      <div
-        className="collapse-header flex"
-        onClick={() => {
-          setOpen(!open)
-        }}
-      >
-        <Link
-          to={link}
-          getProps={({ isPartiallyCurrent }) =>
-            isPartiallyCurrent ? { className: "active" } : null
-          }
+      <div className="collapse-header flex">
+        <div
+          className="open-dropdown"
+          onClick={() => {
+            setOpen(true)
+          }}
         >
-          <h4>{title}</h4>
-        </Link>
-        <div className="plus-minus">
+          <Link
+            to={link}
+            getProps={({ isPartiallyCurrent }) =>
+              isPartiallyCurrent ? { className: "active" } : null
+            }
+          >
+            <h4>{title}</h4>
+          </Link>
+        </div>
+        <div
+          className="plus-minus"
+          onClick={() => {
+            setOpen(!open)
+          }}
+        >
           <h4>{open ? "-" : "+"}</h4>
         </div>
       </div>

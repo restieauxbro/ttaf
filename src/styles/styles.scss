@@ -66,21 +66,20 @@
       }
       .collapse-header {
         width: 100%;
-        cursor: pointer;
+
         &.flex {
           justify-content: space-between;
         }
         .plus-minus {
-          width: 15px;
-          height: 15px;
           text-align: center;
+          padding: 2px 2px 5px 30px;
         }
         h4 {
           margin: 0;
           font-weight: 400;
           font-size: 1.3rem;
-          transition: color 1s ease
-          ;
+          transition: color 1s ease;
+          cursor: pointer;
         }
       }
       .sub-nav-cnt {
@@ -126,7 +125,7 @@
   color: var(--color-primary);
   padding-left: 1.5em;
   position: relative;
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     left: -5px;

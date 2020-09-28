@@ -39,7 +39,6 @@ const Layout = ({ children, pageTitle }) => {
         </div>
       </header>
       <SidebarNav />
-      <Window pageTitle={pageTitle}>{children}</Window>
     </div>
   )
 }

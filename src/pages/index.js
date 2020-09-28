@@ -5,28 +5,14 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../styles/styles.scss"
+import Window from "../components/window"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
-
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+    <Window location={location} title={`siteTitle`}>
+      <SEO title="Home" />
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugit,
@@ -52,7 +38,7 @@ const BlogIndex = ({ data, location }) => {
         mollitia corporis excepturi praesentium vitae, tempora cupiditate
         deserunt veritatis voluptate!
       </p>
-    </Layout>
+    </Window>
   )
 }
 
