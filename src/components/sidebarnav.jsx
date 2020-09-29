@@ -27,16 +27,17 @@ const SidebarNav = () => {
     <div className="global-sidebar">
       <div className="margin">
         <div className="sidebar-container">
-          
           {menuLinks.map(({ name, link, subMenu }) => (
+
             <Collapsable title={name} link={link}>
-               {subMenu.map(({ anchorName, anchorLink }) => (
+              
+              {subMenu.map(({ anchorName, anchorLink }) => (
                 <div className="sub-nav-items">
-                  
-                    <div>
-                      <Link to={anchorLink} activeClassName="active">{anchorName}</Link>
-                    </div>
-                  
+                  <div>
+                    <Link to={anchorLink} activeClassName="active">
+                      {anchorName}
+                    </Link>
+                  </div>
                 </div>
               ))}
             </Collapsable>

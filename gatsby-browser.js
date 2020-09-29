@@ -9,9 +9,9 @@ import "./src/style.css"
 // Highlighting for code blocks
 import "prismjs/themes/prism.css"
 
-import React from 'react';
-import RootWrapper from './src/components/rootwrapper'
+// import React from "react"
+// import RootWrapper from "./src/components/rootwrapper"
 
-export const wrapPageElement = ({element, props}) => (
-<RootWrapper {...props}>{element}</RootWrapper>
-)
+// export const wrapPageElement = ({ element, props }) => (
+//   <RootWrapper {...props}>{element}</RootWrapper>
+// )
