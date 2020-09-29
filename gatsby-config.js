@@ -3,12 +3,12 @@ module.exports = {
     title: `Targeted Training and Apprenticeship Fund`,
     author: {
       name: `Competenz`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: `A quick site`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A TTAF UI concept`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: ``,
     },
     menuLinks: [
       {
@@ -131,7 +131,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/Competenz_monogram_rgb_1.0.jpg`,
       },
     },
     `gatsby-plugin-react-helmet`,
