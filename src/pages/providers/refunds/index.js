@@ -3,7 +3,7 @@ import Window from '../../../components/window'
 
 const Ttaf = () => {
   return (
-    <Window pageTitle="How do I claim?">
+    <Window pageTitle="How do get my refund?">
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius dolore
         dolor possimus blanditiis aliquid alias? Ad commodi, quos ab, minus
