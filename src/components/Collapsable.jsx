@@ -16,12 +16,7 @@ const Collapsable = ({ title, children, link }) => {
             setOpen(true)
           }}
         >
-          <Link
-            to={link}
-            getProps={({ isPartiallyCurrent }) =>
-              isPartiallyCurrent ? { className: "active" } : null
-            }
-          >
+          <Link to={link} getProps={isActive}>
             <h4>{title}</h4>
           </Link>
         </div>

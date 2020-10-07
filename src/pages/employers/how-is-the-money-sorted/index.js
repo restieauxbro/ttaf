@@ -1,5 +1,5 @@
 import React from "react"
-import Window from '../../components/window'
+import Window from '../../../components/window'
 
 const Ttaf = () => {
   return (

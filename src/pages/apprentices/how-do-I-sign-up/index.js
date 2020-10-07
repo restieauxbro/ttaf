@@ -1,9 +1,9 @@
 import React from "react"
-import Window from '../../components/window'
+import Window from '../../../components/window'
 
 const Ttaf = () => {
   return (
-    <Window pageTitle="How do I claim?">
+    <Window pageTitle="How do I sign up?">
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius dolore
         dolor possimus blanditiis aliquid alias? Ad commodi, quos ab, minus

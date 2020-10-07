@@ -3,17 +3,35 @@ import { Link, useStaticQuery } from "gatsby"
 
 import Collapsable from "../components/Collapsable"
 
-const SidebarNav = () => {
+import {audienceData} from "../data/audiences"
+
+const SidebarNav = ({ audience, setAudience }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
-          menuLinks {
-            name
+          apprenticeMenuLinks {
             link
+            name
             subMenu {
-              anchorName
               anchorLink
+              anchorName
+            }
+          }
+          employersMenuLinks {
+            link
+            name
+            subMenu {
+              anchorLink
+              anchorName
+            }
+          }
+          providersMenuLinks {
+            link
+            name
+            subMenu {
+              anchorLink
+              anchorName
             }
           }
         }
@@ -21,18 +39,22 @@ const SidebarNav = () => {
     }
   `)
 
-  const menuLinks = data.site.siteMetadata.menuLinks
+  let menuLinks
+  if (audience === "employers")
+    menuLinks = data.site.siteMetadata.employersMenuLinks
+  else if (audience === "providers")
+    menuLinks = data.site.siteMetadata.providersMenuLinks
+  else menuLinks = data.site.siteMetadata.apprenticeMenuLinks
 
   return (
     <div className="global-sidebar">
       <div className="margin">
         <div className="sidebar-container">
+          <AudienceDropdown setAudience={setAudience} audience={audience} />
           {menuLinks.map(({ name, link, subMenu }) => (
-
-            <Collapsable title={name} link={link}>
-              
+            <Collapsable title={name} link={link} key={link}>
               {subMenu.map(({ anchorName, anchorLink }) => (
-                <div className="sub-nav-items">
+                <div className="sub-nav-items" key={anchorLink}>
                   <div>
                     <Link to={anchorLink} activeClassName="active">
                       {anchorName}
@@ -47,5 +69,29 @@ const SidebarNav = () => {
     </div>
   )
 }
-
 export default SidebarNav
+
+const AudienceDropdown = ({ audience, setAudience }) => {
+  function handleAudienceSelection(e) {
+    setAudience(e.target.value)
+    console.log(audience)
+  }
+
+ 
+  return (
+    <>
+      <select
+        name="audience"
+        id="audience-dropdown"
+        onChange={handleAudienceSelection}
+        value={audience}
+      >
+        {audienceData.map(({ name, state }) => (
+          <option value={state} key={name}>
+            {name}
+          </option>
+        ))}
+      </select>
+    </>
+  )
+}

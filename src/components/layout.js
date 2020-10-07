@@ -2,9 +2,9 @@ import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 
 import SidebarNav from "./sidebarnav"
-import Window from "../components/window"
+import Characters from "./entrance-add-ons/characters"
 
-const Layout = ({ children, pageTitle }) => {
+const Layout = ({ children, pageTitle, audience, setAudience }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -16,6 +16,7 @@ const Layout = ({ children, pageTitle }) => {
   `)
   return (
     <div>
+      
       <header className="global-header">
         <div className="margin flex">
           
@@ -38,7 +39,7 @@ const Layout = ({ children, pageTitle }) => {
           </ul>
         </div>
       </header>
-      <SidebarNav />
+      <SidebarNav audience={audience} setAudience={setAudience} />
     </div>
   )
 }

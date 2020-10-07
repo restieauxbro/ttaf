@@ -10,60 +10,148 @@ module.exports = {
     social: {
       twitter: ``,
     },
-    menuLinks: [
+    employersMenuLinks: [
       {
         name: `What am I eligible for?`,
-        link: `/what-am-I-eligible-for`,
+        link: `/employers/what-am-I-eligible-for`,
         subMenu: [
           {
             anchorName: `example`,
-            anchorLink: `/what-am-I-eligible-for/example`,
+            anchorLink: `/employers/what-am-I-eligible-for/example`,
           },
           {
             anchorName: `example`,
-            anchorLink: `/what-am-I-eligible-for/example`,
+            anchorLink: `/employers/what-am-I-eligible-for/example`,
           },
         ],
       },
       {
         name: `How do I claim?`,
-        link: `/how-do-I-claim`,
+        link: `/employers/how-do-I-claim`,
         subMenu: [
           {
-            anchorName: `example3`,
-            anchorLink: `/how-do-I-claim/example`,
+            anchorName: `example`,
+            anchorLink: `/employers/how-do-I-claim/example`,
           },
           {
-            anchorName: `example4`,
-            anchorLink: `/how-do-I-claim/example`,
+            anchorName: `example`,
+            anchorLink: `/employers/how-do-I-claim/example`,
           },
         ],
       },
       {
         name: `How is the money sorted?`,
-        link: `/how-is-the-money-sorted`,
+        link: `/employers/how-is-the-money-sorted`,
+        subMenu: [
+          {
+            anchorName: `example`,
+            anchorLink: `/employers/how-is-the-money-sorted/example`,
+          },
+          {
+            anchorName: `example`,
+            anchorLink: `/employers/how-is-the-money-sorted/example`,
+          },
+        ],
+      },
+    ],
+    apprenticeMenuLinks: [
+      {
+        name: `What am I eligible for?`,
+        link: `/apprentices/what-am-I-eligible-for`,
+        subMenu: [
+          {
+            anchorName: `example`,
+            anchorLink: `/apprentices/what-am-I-eligible-for/example`,
+          },
+          {
+            anchorName: `example`,
+            anchorLink: `/apprentices/what-am-I-eligible-for/example`,
+          },
+        ],
+      },
+      {
+        name: `How do I sign up?`,
+        link: `/apprentices/how-do-I-sign-up`,
         subMenu: [
           {
             anchorName: `example3`,
-            anchorLink: `/how-is-the-money-sorted/example`,
+            anchorLink: `/apprentices/how-do-I-sign-up/example`,
           },
           {
             anchorName: `example4`,
-            anchorLink: `/how-is-the-money-sorted/example`,
+            anchorLink: `/apprentices/how-do-I-sign-up/example`,
+          },
+        ],
+      },
+      {
+        name: `I already have an apprenticeship`,
+        link: `/apprentices/I-already-have-an-apprenticeship`,
+        subMenu: [
+          {
+            anchorName: `example3`,
+            anchorLink: `/apprentices/I-already-have-an-apprenticeship/example`,
+          },
+          {
+            anchorName: `example4`,
+            anchorLink: `/apprentices/I-already-have-an-apprenticeship/example`,
           },
         ],
       },
       {
         name: `How do I claim?`,
-        link: `/example`,
+        link: `/apprentices/how-do-I-claim`,
         subMenu: [
           {
             anchorName: `example3`,
-            anchorLink: `example`,
+            anchorLink: `/apprentices/how-do-I-claim/example`,
           },
           {
             anchorName: `example4`,
-            anchorLink: `example`,
+            anchorLink: `/apprentices/how-do-I-claim/example`,
+          },
+        ],
+      },
+    ],
+    providersMenuLinks: [
+      {
+        name: `Educators' information`,
+        link: `/providers/educators-info`,
+        subMenu: [
+          {
+            anchorName: `example`,
+            anchorLink: `/providers/educators-info/example`,
+          },
+          {
+            anchorName: `example`,
+            anchorLink: `/providers/educators-info/example`,
+          },
+        ],
+      },
+      {
+        name: `Refunds`,
+        link: `/providers/refunds`,
+        subMenu: [
+          {
+            anchorName: `example`,
+            anchorLink: `/providers/refunds/example`,
+          },
+          {
+            anchorName: `example`,
+            anchorLink: `/providers/refunds/example`,
+          },
+        ],
+      },
+      {
+        name: `What happens?`,
+        link: `/providers/what-happens`,
+        subMenu: [
+          {
+            anchorName: `example`,
+            anchorLink: `/providers/what-happens/example`,
+          },
+          {
+            anchorName: `example`,
+            anchorLink: `/providers/what-happens/example`,
           },
         ],
       },
@@ -71,6 +159,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
