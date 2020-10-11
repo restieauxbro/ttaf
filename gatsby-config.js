@@ -108,7 +108,7 @@ module.exports = {
         link: `/apprentices/how-do-I-sign-up`,
         subMenu: [
           {
-            anchorName: `Our sales pitch for taking new people`,
+            anchorName: `Job board and explainer`,
             anchorLink: `/apprentices/how-do-I-sign-up/example`,
           },
           {
