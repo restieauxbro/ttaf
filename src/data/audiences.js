@@ -2,16 +2,16 @@ export const audienceData = [
     {
       name: "Employers",
       state: "employers",
-      mainPage: "/employers/what-am-I-eligible-for",
+      mainPage: "/employers/what-government-support-is-there",
     },
     {
       name: "Apprentices",
       state: "apprentices",
-      mainPage: "/apprentices/what-am-I-eligible-for",
+      mainPage: "/apprentices/what-government-support-is-there",
     },
     {
-      name: "Providers",
+      name: "Providers and assessors",
       state: "providers",
-      mainPage: "/providers/educators-info",
+      mainPage: "/providers/providers",
     },
   ]

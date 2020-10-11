@@ -12,60 +12,94 @@ module.exports = {
     },
     employersMenuLinks: [
       {
-        name: `What am I eligible for?`,
-        link: `/employers/what-am-I-eligible-for`,
+        name: `What Government support is there?`,
+        link: `/employers/what-government-support-is-there`,
         subMenu: [
           {
-            anchorName: `example`,
-            anchorLink: `/employers/what-am-I-eligible-for/example`,
-          },
-          {
-            anchorName: `example`,
-            anchorLink: `/employers/what-am-I-eligible-for/example`,
-          },
-        ],
-      },
-      {
-        name: `How do I claim?`,
-        link: `/employers/how-do-I-claim`,
-        subMenu: [
-          {
-            anchorName: `example`,
+            anchorName: `Free apprenticeships and traineeships`,
             anchorLink: `/employers/how-do-I-claim/example`,
           },
           {
-            anchorName: `example`,
+            anchorName: `Apprenticeship Boost`,
+            anchorLink: `/employers/how-do-I-claim/example`,
+          },
+          {
+            anchorName: `Mana in mahi`,
+            anchorLink: `/employers/how-do-I-claim/example`,
+          },
+          {
+            anchorName: `Regional Apprenticeship Fund`,
             anchorLink: `/employers/how-do-I-claim/example`,
           },
         ],
       },
       {
-        name: `How is the money sorted?`,
+        name: `How Competenz grows your business`,
+        link: ``,
+        subMenu: [
+          {
+            anchorName: `Our sales pitch for taking new people`,
+            anchorLink: `/employers/how-is-the-money-sorted/example`,
+          },
+          {
+            anchorName: `example`,
+            anchorLink: `/employers/how-is-the-money-sorted/example`,
+          },
+        ],
+      },
+      {
+        name: `Find my funding`,
         link: `/employers/how-is-the-money-sorted`,
         subMenu: [
           {
-            anchorName: `example`,
+            anchorName: `What sectors and levels are eligible?`,
             anchorLink: `/employers/how-is-the-money-sorted/example`,
           },
           {
-            anchorName: `example`,
+            anchorName: `Check our quick funding navigator`,
             anchorLink: `/employers/how-is-the-money-sorted/example`,
+          },
+        ],
+      },
+      {
+        name: `How do I claim reimbursement?`,
+        link: `/employers/what-am-I-eligible-for`,
+        subMenu: [
+          {
+            anchorName: `For costs paid to a provider`,
+            anchorLink: `/employers/what-am-I-eligible-for/example`,
+          },
+          {
+            anchorName: `For costs paid to a forestry trainer`,
+            anchorLink: `/employers/what-am-I-eligible-for/example`,
+          },
+          {
+            anchorName: `Resources`,
+            anchorLink: `/employers/what-am-I-eligible-for/example`,
           },
         ],
       },
     ],
     apprenticeMenuLinks: [
       {
-        name: `What am I eligible for?`,
-        link: `/apprentices/what-am-I-eligible-for`,
+        name: `What Government support is there?`,
+        link: `/apprentices/what-government-support-is-there`,
         subMenu: [
           {
-            anchorName: `example`,
-            anchorLink: `/apprentices/what-am-I-eligible-for/example`,
+            anchorName: `Free apprenticeships and traineeships`,
+            anchorLink: `/apprentices/what-government-support-is-there/example`,
           },
           {
-            anchorName: `example`,
-            anchorLink: `/apprentices/what-am-I-eligible-for/example`,
+            anchorName: `Apprenticeship Boost`,
+            anchorLink: `/apprentices/what-government-support-is-there/example`,
+          },
+          {
+            anchorName: `Mana in mahi`,
+            anchorLink: `/employers/how-do-I-claim/example`,
+          },
+          {
+            anchorName: `Regional Apprenticeship Fund`,
+            anchorLink: `/employers/how-do-I-claim/example`,
           },
         ],
       },
@@ -74,7 +108,7 @@ module.exports = {
         link: `/apprentices/how-do-I-sign-up`,
         subMenu: [
           {
-            anchorName: `example3`,
+            anchorName: `Our sales pitch for taking new people`,
             anchorLink: `/apprentices/how-do-I-sign-up/example`,
           },
           {
@@ -88,70 +122,50 @@ module.exports = {
         link: `/apprentices/I-already-have-an-apprenticeship`,
         subMenu: [
           {
-            anchorName: `example3`,
+            anchorName: `Do I get a refund?`,
             anchorLink: `/apprentices/I-already-have-an-apprenticeship/example`,
           },
           {
-            anchorName: `example4`,
+            anchorName: `How are my fees handled?`,
             anchorLink: `/apprentices/I-already-have-an-apprenticeship/example`,
-          },
-        ],
-      },
-      {
-        name: `How do I claim?`,
-        link: `/apprentices/how-do-I-claim`,
-        subMenu: [
-          {
-            anchorName: `example3`,
-            anchorLink: `/apprentices/how-do-I-claim/example`,
-          },
-          {
-            anchorName: `example4`,
-            anchorLink: `/apprentices/how-do-I-claim/example`,
           },
         ],
       },
     ],
     providersMenuLinks: [
       {
-        name: `Educators' information`,
+        name: `Providers`,
+        link: `/providers/providers`,
+        subMenu: [
+          {
+            anchorName: `Reimbursements for your customers`,
+            anchorLink: `/providers/providers/example`,
+          },
+          {
+            anchorName: `Level 1`,
+            anchorLink: `/providers/providers/example`,
+          },
+          {
+            anchorName: `Level 2`,
+            anchorLink: `/providers/providers/example`,
+          },
+          {
+            anchorName: `Resources`,
+            anchorLink: `/providers/providers/example`,
+          },
+        ],
+      },
+      {
+        name: `Contract assessors`,
         link: `/providers/educators-info`,
         subMenu: [
           {
-            anchorName: `example`,
+            anchorName: `Reimbursements for your customers`,
             anchorLink: `/providers/educators-info/example`,
           },
           {
-            anchorName: `example`,
+            anchorName: `Resources`,
             anchorLink: `/providers/educators-info/example`,
-          },
-        ],
-      },
-      {
-        name: `Refunds`,
-        link: `/providers/refunds`,
-        subMenu: [
-          {
-            anchorName: `example`,
-            anchorLink: `/providers/refunds/example`,
-          },
-          {
-            anchorName: `example`,
-            anchorLink: `/providers/refunds/example`,
-          },
-        ],
-      },
-      {
-        name: `What happens?`,
-        link: `/providers/what-happens`,
-        subMenu: [
-          {
-            anchorName: `example`,
-            anchorLink: `/providers/what-happens/example`,
-          },
-          {
-            anchorName: `example`,
-            anchorLink: `/providers/what-happens/example`,
           },
         ],
       },
